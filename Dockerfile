@@ -26,6 +26,9 @@ RUN go build -o /go/server
 # Image for application
 FROM alpine:3.16.8
 
+# Copy executable.
+COPY --from=build /go/server /app/server
+
 RUN chmod -R 777 /app/server
 
 WORKDIR /app

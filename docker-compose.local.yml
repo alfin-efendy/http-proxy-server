@@ -12,5 +12,5 @@ services:
       - ./:/app
     ports:
       - 3128:3128
-    command: ["-verbose=true", "-port=3128"]
+      - 2345:2345
     

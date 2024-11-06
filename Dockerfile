@@ -12,11 +12,6 @@ WORKDIR $GOPATH/src/packages/goginapp/
 COPY . .
 RUN go get -d -v
 
-ENV GO111MODULE="on" \
-  GOARCH="amd64" \
-  GOOS="linux" \
-  CGO_ENABLED="0"
-
 # Build the Go app
 RUN go build -o /go/server
 
